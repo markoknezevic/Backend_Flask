@@ -17,5 +17,5 @@ app = create_app(Config)
 def hello():
     return "Hello world"
 
-
-app.run()
+if __name__ == "__main__":
+    app.run()
