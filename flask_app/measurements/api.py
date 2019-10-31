@@ -21,6 +21,13 @@ class MeasurementsApiLast(Resource):
         return measurement_get_schema.dump(last_record)
 
 
+@measurement_api.route("/test")
+class MeasurementsApiLast(Resource):
+    def get(self):
+
+        return {"Message": "Success!!"}, 200
+
+
 @measurement_api.route("/")
 @measurement_api.route("/<int:measurement_id>")
 class MeasurementApi(Resource):
