@@ -2,7 +2,7 @@ import os
 
 from flask_app import create_app
 from config.development import Development as Config
-from flask_app import db
+
 
 # if os.environ["FLASK_ENV_TYPE"] == "Development":
 #    from config.development import Development as Config
@@ -17,8 +17,6 @@ app = create_app(Config)
 @app.route("/")
 def hello():
     return "Hello world"
-
-
 
 
 if __name__ == "__main__":
