@@ -1,4 +1,6 @@
-from config  import Config
+import os
+from config import Config
+
 
 class Development(Config):
     ENV_TYPE = "Dev"
@@ -9,6 +11,7 @@ class Development(Config):
     DB_HOST = "127.0.0.1"
     DB_PORT = 5432
 
-    SQLALCHEMY_DATABASE_URI =\
-    f'postgresql+psycopg2://'\
-    f'{DB_USER}:{DB_PASSWD}@{DB_HOST}:{DB_PORT}/{DB_NAME}'
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    # \
+    # f'postgresql+psycopg2://'\
+    # f'{DB_USER}:{DB_PASSWD}@{DB_HOST}:{DB_PORT}/{DB_NAME}'
