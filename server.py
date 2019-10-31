@@ -19,8 +19,6 @@ def hello():
     return "Hello world"
 
 
-db.init_app(app)
-
 
 
 if __name__ == "__main__":
